@@ -75,7 +75,7 @@ temp_json = response.json()
 candidate = temp_json['choices'][0]['message']['content']
 print("\nOutput message: ",candidate)
 
-###=====================Extracting the objects Version 2============###
+###=====================Extracting the objects Version 2 in JSON format ============###
 new_res = candidate.replace('json', '').replace("```", "")
 print(f"\n {new_res}")
 with open("sample.json", "w") as file:
@@ -87,7 +87,7 @@ with open("sample.json", "r") as in_file:
 print(json_object)
 names = ', '.join(item['name'] for item in json_object['labels'])
 print(f"\n names: {names}")
-###==================== End of extracting the objects Version 2 ======###
+###==================== End of extracting the objects Version 2 in JSON format======###
 
 ###########============= DRAWING THE GROUND TRUHT BOUNDING BOXES ================############
 # img = cv2.imread(image_path)       
